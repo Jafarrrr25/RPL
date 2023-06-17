@@ -15,4 +15,9 @@ class Home extends BaseController
     {
         return view('About');
     }
+
+    public function help()
+    {
+        return view('Help');
+    }
 }

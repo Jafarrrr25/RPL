@@ -37,6 +37,7 @@ use App\Controllers\Home;
 
 $routes->get('/', 'Home::index');
 $routes->get('/about', 'Home::about');
+$routes->get('/help', 'Home::help');
 $routes->match(['get', 'post'], 'mobil/showDataMobil', [Mobil::class, 'showData']);
 $routes->match(['get', 'post'], 'mobil/addData', [Mobil::class, 'simpan']);
 $routes->match(['get', 'post'], 'Akun/Register', [Login::class, 'register']);

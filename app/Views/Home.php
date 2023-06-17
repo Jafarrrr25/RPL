@@ -44,7 +44,7 @@
                                     <a class="nav-link" href="/about">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/view/Help">Help</a>
+                                    <a class="nav-link" href="/help">Help</a>
                                 </li>
                             </ul>
                             <form class="d-flex">
