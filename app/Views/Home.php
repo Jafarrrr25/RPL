@@ -39,7 +39,7 @@
                                         <li><a class="dropdown-item" href="#">Mobil</a></li>
                                         <li><a class="dropdown-item" href="#">Supir</a></li>
                                     </ul>
-                                </li>
+                                </li> 
                                 <li class="nav-item">
                                     <a class="nav-link" href="/view/About">About Us</a>
                                 </li>
