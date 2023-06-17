@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Files\File;
-use App\Models\ModelMobil;
+use App\Models\ModelSupir;
 
 class Supir extends BaseController
 {
@@ -18,20 +18,14 @@ class Supir extends BaseController
         // if ($session->has('username')) {
         helper('form');
         // Memeriksa apakah melakukan submit data atau tidak.
-        if (!$this->request->is('post')) {
+        if (!$this->request->isMethod('post')) {
             return view('/Supir/addSupir');
         }
 
-        $validationRule = [
+        $validationRules = [
             'userfile' => [
                 'label' => 'Image File',
-                'rules' => [
-                    'uploaded[userfile]',
-                    'is_image[userfile]',
-                    'mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
-                    'max_size[userfile,100]',
-                    'max_dims[userfile,1024,768]',
-                ],
+                'rules' => 'uploaded[userfile]|is_image[userfile]|mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]|max_size[userfile,100]|max_dims[userfile,1024,768]',
             ],
         ];
 
@@ -40,20 +34,20 @@ class Supir extends BaseController
             "idSupir", "nama_supir", "alamat_supir", "no_telp_supir", "foto_supir"
         ]);
 
-        if (!$this->validate($validationRule)) {
-            $data = ['errors' => $this->validator->getErrors()];
-
-            return view('/Supir/addSupir');
+        if (!$this->validate($validationRules)) {
+            $data['errors'] = $this->validator->getErrors();
+            return view('/Supir/addSupir', $data);
         }
 
         $img = $this->request->getFile('userfile');
         if (!$img->hasMoved()) {
             $filepath = WRITEPATH . 'uploads/' . $img->store();
 
-            $data = ['uploaded_fileinfo' => new File($filepath)];
+            $data['uploaded_fileinfo'] = new File($filepath);
         }
+
         // Mengakses Model untuk menyimpan data
-        $model = model(ModelSupir::class);
+        $model = new ModelSupir();
         $model->simpan($post);
         return view('/Supir/Success');
         // } else {
@@ -65,21 +59,15 @@ class Supir extends BaseController
     {
         helper(['form', 'url']);
 
-        $validationRule = [
+        $validationRules = [
             'userfile' => [
                 'label' => 'Image File',
-                'rules' => [
-                    'uploaded[userfile]',
-                    'is_image[userfile]',
-                    'mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
-                    'max_size[userfile,100]',
-                    'max_dims[userfile,1024,768]',
-                ],
+                'rules' => 'uploaded[userfile]|is_image[userfile]|mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]|max_size[userfile,100]|max_dims[userfile,1024,768]',
             ],
         ];
 
-        if (!$this->validate($validationRule)) {
-            $data = ['errors' => $this->validator->getErrors()];
+        if (!$this->validate($validationRules)) {
+            $data['errors'] = $this->validator->getErrors();
             return view('Supir/addSupir', $data);
         }
 
