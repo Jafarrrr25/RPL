@@ -18,7 +18,7 @@ class Supir extends BaseController
         // if ($session->has('username')) {
         helper('form');
         // Memeriksa apakah melakukan submit data atau tidak.
-        if (!$this->request->isMethod('post')) {
+        if (!$this->request->is('post')) {
             return view('/Supir/addSupir');
         }
 
