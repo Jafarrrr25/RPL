@@ -8,7 +8,13 @@
 </head>
 
 <body>
-    test
+    <div class="container">
+        <div class="col">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
