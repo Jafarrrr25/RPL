@@ -14,7 +14,7 @@ class Supir extends BaseController
 
     public function simpan()
     {
-        $session = session();
+        // $session = session();
         // if ($session->has('username')) {
         helper('form');
         // Memeriksa apakah melakukan submit data atau tidak.

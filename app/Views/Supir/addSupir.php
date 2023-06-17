@@ -14,7 +14,7 @@
     <article>
         <div class="container mt-2">
             <h1>Tambah Data Mobil</h1>
-            <form action="simpan" method="post">
+            <form action="simpan" method="POST">
                 <? csrf_field() ?>
                 <div class="form-group">
                     <label for="nim"><b>ID Supir :</b> </label>
