@@ -1,1 +1,1 @@
-Mali ASu
+Mali
