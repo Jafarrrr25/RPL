@@ -32,9 +32,13 @@ $routes->set404Override();
 
 // Untuk Mobil 
 use App\Controllers\Mobil;
+use App\Controllers\Login;
+
 $routes->get('/', 'Mobil::showData');
 $routes->match(['get', 'post'], 'mobil/showDataMobil', [Mobil::class, 'showData']);
 $routes->match(['get', 'post'], 'mobil/addData', [Mobil::class, 'simpan']);
+$routes->match(['get', 'post'], 'Akun/Register', [Login::class, 'register']);
+$routes->match([])
 
 /*
  * --------------------------------------------------------------------
