@@ -55,7 +55,7 @@ class Mobil extends BaseController
         // Mengakses Model untuk menyimpan data
         $model = model(ModelMobil::class);
         $model->simpan($post);
-        return view('/Mobil/addMobil');
+        return view('/Mobil/Success');
         // } else {
         //     return view('/Mobil/addMobil');
         // } 
