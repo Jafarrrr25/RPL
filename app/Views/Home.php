@@ -8,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-</head>  
+</head>
 
 <body>
-    <div class="container p-5 bg-dark text-warning text-center">  
+    <div class="container p-5 bg-dark text-warning text-center">
         <img src="https://i.pinimg.com/564x/49/ac/3e/49ac3e04d48faea4cf82a2c56e0e91b8.jpg" class="img-fluid" alt="Anjay">
         <h1>Rental Mali Anjay Mabar</h1>
     </div>
@@ -39,9 +39,9 @@
                                         <li><a class="dropdown-item" href="#">Mobil</a></li>
                                         <li><a class="dropdown-item" href="#">Supir</a></li>
                                     </ul>
-                                </li> 
+                                </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/view/About">About Us</a>
+                                    <a class="nav-link" href="/about">About Us</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/view/Help">Help</a>
