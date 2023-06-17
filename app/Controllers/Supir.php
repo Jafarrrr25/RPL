@@ -46,7 +46,7 @@ class Supir extends BaseController
             $data['uploaded_fileinfo'] = new File($filepath);
         }
 
-        // Mengakses Model untuk menyimpan data
+        // Mengakses Model untuk menyimpan dat
         $model = new ModelSupir();
         $model->simpan($post);
         return view('/Supir/Success');
