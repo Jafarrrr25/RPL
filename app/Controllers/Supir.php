@@ -18,36 +18,42 @@ class Supir extends BaseController
         // if ($session->has('username')) {
         helper('form');
         // Memeriksa apakah melakukan submit data atau tidak.
-        if (!$this->request->isMethod('post')) {
+        if (!$this->request->is('post')) {
             return view('/Supir/addSupir');
         }
 
-        $validationRules = [
+        $validationRule = [
             'userfile' => [
                 'label' => 'Image File',
-                'rules' => 'uploaded[userfile]|is_image[userfile]|mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]|max_size[userfile,100]|max_dims[userfile,1024,768]',
+                'rules' => [
+                    'uploaded[userfile]',
+                    'is_image[userfile]',
+                    'mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                    'max_size[userfile,100]',
+                    'max_dims[userfile,1024,768]',
+                ],
             ],
         ];
 
         // Mengambil data yang disubmit dari form
         $post = $this->request->getPost([
-            "idSupir", "nama_supir", "alamat_supir", "no_telp_supir", "foto_supir"
+            'idSupir', 'nama_supir', 'alamat_supir', 'no_telp_supir', 'foto_supir'
         ]);
 
-        if (!$this->validate($validationRules)) {
-            $data['errors'] = $this->validator->getErrors();
-            return view('/Supir/addSupir', $data);
+        if (!$this->validate($validationRule)) {
+            $data = ['errors' => $this->validator->getErrors()];
+
+            return view('/Supir/addSupir');
         }
 
         $img = $this->request->getFile('userfile');
         if (!$img->hasMoved()) {
             $filepath = WRITEPATH . 'uploads/' . $img->store();
 
-            $data['uploaded_fileinfo'] = new File($filepath);
+            $data = ['uploaded_fileinfo' => new File($filepath)];
         }
-
-        // Mengakses Model untuk menyimpan dat
-        $model = new ModelSupir();
+        // Mengakses Model untuk menyimpan data
+        $model = model(ModelSupir::class);
         $model->simpan($post);
         return view('/Supir/Success');
         // } else {
@@ -59,15 +65,21 @@ class Supir extends BaseController
     {
         helper(['form', 'url']);
 
-        $validationRules = [
+        $validationRule = [
             'userfile' => [
                 'label' => 'Image File',
-                'rules' => 'uploaded[userfile]|is_image[userfile]|mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]|max_size[userfile,100]|max_dims[userfile,1024,768]',
+                'rules' => [
+                    'uploaded[userfile]',
+                    'is_image[userfile]',
+                    'mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                    'max_size[userfile,100]',
+                    'max_dims[userfile,1024,768]',
+                ],
             ],
         ];
 
-        if (!$this->validate($validationRules)) {
-            $data['errors'] = $this->validator->getErrors();
+        if (!$this->validate($validationRule)) {
+            $data = ['errors' => $this->validator->getErrors()];
             return view('Supir/addSupir', $data);
         }
 

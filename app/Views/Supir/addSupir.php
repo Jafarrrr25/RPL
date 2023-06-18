@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Tambah Mobil</title>
+    <title>Tambah Supir</title>
 </head>
 
 <body>
     <article>
         <div class="container mt-2">
-            <h1>Tambah Data Mobil</h1>
+            <h1>Tambah Data Supir</h1>
             <form action="simpan" method="post">
                 <? csrf_field() ?>
                 <div class="form-group">
