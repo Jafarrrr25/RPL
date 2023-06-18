@@ -13,8 +13,13 @@
 <body>
     <article>
         <div class="container mt-2">
+<<<<<<< HEAD
             <h1>Tambah Data Supir</h1>
             <form action="simpan" method="post">
+=======
+            <h1>Tambah Data Mobil</h1>
+            <form action="simpan" method="POST">
+>>>>>>> 691d2ba6bcfd1269cf8df83e3716ab58d0d6fb8d
                 <? csrf_field() ?>
                 <div class="form-group">
                     <label for="nim"><b>ID Supir :</b> </label>

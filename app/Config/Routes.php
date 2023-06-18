@@ -41,7 +41,11 @@ $routes->get('/help', 'Home::help');
 $routes->match(['get', 'post'], 'mobil/showDataMobil', [Mobil::class, 'showData']);
 $routes->match(['get', 'post'], 'mobil/addData', [Mobil::class, 'simpan']);
 $routes->match(['get', 'post'], 'Akun/Register', [Login::class, 'register']);
+<<<<<<< HEAD
 $routes->match(['get', 'post'], 'supir/showDataSupir', [Supir::class, 'showData']);
+=======
+$routes->match(['get', 'post'], 'supir/add', [Supir::class, 'simpan']);
+>>>>>>> 691d2ba6bcfd1269cf8df83e3716ab58d0d6fb8d
 /*
  * --------------------------------------------------------------------
  * Additional Routing
