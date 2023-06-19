@@ -8,7 +8,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('Home');
+        return view('HomeCust');
     }
 
     public function about()
@@ -19,5 +19,10 @@ class Home extends BaseController
     public function help()
     {
         return view('Help');
+    }
+
+    public function admin()
+    {
+        return view('HomeAdmin');
     }
 }

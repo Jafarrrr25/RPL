@@ -6,25 +6,26 @@ use CodeIgniter\Model;
 
 class ModelMobil extends Model
 {
-    protected $table = 'Mobil';
+    protected $table = 'mobil';
+    protected $primaryKey = 'idKendaraan';
     protected $allowedFields = [
         'idKendaraan', 'no_polisi', 'nama_kendaraan', 'type', 'tanggal_pajak', 'status', 'warna', 'harga_sewa', 'foto'
     ];
 
-    public function simpan($record)
-    {
-        $foto = $this->request->getFile('foto');
-        if ($foto->isValid() && !$foto->hasMoved()) {
-            $newName = $foto->getRandomName();
-            $foto->move('D:/Install/xampp/htdocs/RPL/public', $newName); // Specify the destination folder for uploaded photos
-
-            $record['foto'] = $newName;
-        } else {
-            echo "<h2>Gagal Upload Foto</h2>";
-        }
-
-        $this->save($record);
-    }
+    // public function simpan($record)
+    // {
+    //     $this->save([
+    //                 'idKendaraan' => $record['idk'],
+    //                 'no_polisi' => $record['plat'],
+    //                 'nama_kendaraan' => $record['nama'],
+    //                 'type' => $record['tipe'],
+    //                 'tanggal_pajak' => $record['tgl_pjk'],
+    //                 'status' => $record['status'],
+    //                 'warna' => $record['warna'],
+    //                 'harga_sewa' => $record['sewa'],
+    //                 'foto' => $record[file_get_contents('http://127.0.0.1/phpmyadmin/')],
+    //             ]);
+    // }
 
     // public function simpan($record)
     // {
