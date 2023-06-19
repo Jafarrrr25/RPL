@@ -30,23 +30,12 @@ class Mobil extends BaseController
                 ],
             ],
         ];
+
         if (! $this->validate($validationRule)) {
             $data = ['errors' => $this->validator->getErrors()];
 
-            return view('/Mobil/addMobil', $data);
+            return view('Mobil/addMobil', $data);
         }
-
-        $img = $this->request->getFile('foto');
-
-        if (! $img->hasMoved()) {
-            $filepath = WRITEPATH . 'public/mobil' . $img->store();
-
-            $data = ['uploaded_fileinfo' => new File($filepath)];
-
-            return view('/Mobil/addMobil', $data);
-        }
-
-        $data = ['errors' => 'The file has already been moved.'];
 
         // Memeriksa apakah melakukan submit data atau tidak.
         if (!$this->request->is('post')) {
@@ -56,9 +45,6 @@ class Mobil extends BaseController
         if ($this->request->getFiles()) {
 
             // Generate nama unik untuk file
-            $nama_file = $img->getClientName();
-
-            $id = $this->request->getPost(["idk"]);
             $nama = $this->request->getPost(["nama"]);
             $plat = $this->request->getPost(["plat"]);
             $tipe = $this->request->getPost(["tipe"]);
@@ -66,25 +52,26 @@ class Mobil extends BaseController
             $status = $this->request->getPost(["status"]);
             $warna = $this->request->getPost(["warna"]);
             $sewa = $this->request->getPost(["sewa"]);
+            $img = $this->request->getFile('foto');
+
+            $image = file_get_contents($img->getRealPath());
+
             // Mengakses Model untuk menyimpan data
             $model = model(ModelMobil::class);
             $model->insert([
-                'idKendaraan' => $id,
                 'nama_kendaraan' => $nama,
-                'no_polisi' => $plat,
+                'nopol' => $plat,
                 'type' => $tipe,
                 'tanggal_pajak' => $pajak,
                 'status' => $status,
                 'warna' => $warna,
-                'sewa' => $sewa,
-                'foto' => file_get_contents(FCPATH.'/public/mobil/' . $nama_file)
+                'harga_sewa' => $sewa,
+                'foto' => $image
             ]);
+            return view('/Mobil/Success');
         } else {            
             return view('/Mobil/Error');
         }
-        
-        return view('/Mobil/Success');
-        
         // } else {
         //     return view('/Mobil/addMobil');
         // } 

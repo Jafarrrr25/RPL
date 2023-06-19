@@ -7,9 +7,9 @@ use CodeIgniter\Model;
 class ModelMobil extends Model
 {
     protected $table = 'mobil';
-    protected $primaryKey = 'idKendaraan';
+    protected $primaryKey = 'nopol';
     protected $allowedFields = [
-        'idKendaraan', 'no_polisi', 'nama_kendaraan', 'type', 'tanggal_pajak', 'status', 'warna', 'harga_sewa', 'foto'
+        'nopol', 'nama_kendaraan', 'type', 'tanggal_pajak', 'status', 'warna', 'harga_sewa', 'foto'
     ];
 
     // public function simpan($record)

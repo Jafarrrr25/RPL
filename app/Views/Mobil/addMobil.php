@@ -14,19 +14,16 @@
     <article>
         <div class="container mt-2">
             <h1>Tambah Data Mobil</h1>
-            <form action="addData" method="post">
+            <!-- <form action="addData" method="post"> -->
+                <?php echo form_open_multipart('mobil/simpan'); ?>
                 <? csrf_field() ?>
                 <div class="form-group">
-                    <label for="nim"><b>ID Kendaraan :</b> </label>
-                    <input type="text" class="form-control" name="idk" id="idk" aria-describedby="nim" placeholder="ID Kendaraan">
-                </div>
-                <div class="form-group">
                     <label for="nama"><b>Nama Kendaraan : </b> </label>
-                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Kendaraan">
+                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Kendaraan" >
                 </div>
                 <div class="form-group">
                     <label for="ipk"><b>Nomor Plat : </b></label>
-                    <input type="text" class="form-control" name="plat" id="plat" placeholder="Plat Mobil">
+                    <input type="text" class="form-control" name="plat" id="plat" placeholder="Plat Mobil" value="AB">
                 </div>
                 <div class="form-group">
                     <label for="ipk"><b>Tipe Mobil : </b></label>
@@ -49,11 +46,12 @@
                 </div>
                 <div class="form-group">
                     <label for="ipk"><b>Harga Sewa : </b></label>
-                    <input type="text" class="form-control" name="sewa" id="sewa" placeholder="Harga Sewa">
+                    <input type="number" class="form-control" name="sewa" id="sewa" placeholder="Harga Sewa">
                 </div>
                 <div class="form-group">
                     <label for="foto"><b>Unggah Foto Mobil :</b></label>
                     <input type="file" class="form-control" name="foto" id="foto" accept="image/*">
+                    <h6 class="text-info">File Maksimal berukuran 1mb</h6>
                 </div>
 
                 <!-- <div class="form-group">
@@ -61,7 +59,8 @@
                     <input type="file" class="form-control" name="foto" id="foto" accept="image/*">
                 </div> -->
                 <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
-            </form>
+            <!-- </form> -->
+            <?php form_close();?>
         </div>
     </article>
 </body>
