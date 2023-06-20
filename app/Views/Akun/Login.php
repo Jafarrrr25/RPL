@@ -32,21 +32,22 @@
     </style>
 </body>
 <article>
-        <div class="container mt-2">
-            <h1>Tambah Data Mobil</h1>
-            <form action="check" method="post">
-                <? csrf_field() ?>
-                
-                <div class="form-group">
-                    <label for="usr"><b>Username : </b></label>
-                    <input type="text" class="form-control" name="usr" id="usr" placeholder="Username">
-                </div>
-                <div class="form-group">
-                    <label for="pwd"><b>Password : </b></label>
-                    <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
-                </div>
-                <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
-            </form>
-        </div>
-    </article>
+    <div class="container mt-2">
+        <h1>Login Cok</h1>
+        <form action="check" method="post">
+            <? csrf_field() ?>
+
+            <div class="form-group">
+                <label for="usr"><b>Username : </b></label>
+                <input type="text" class="form-control" name="usr" id="usr" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="pwd"><b>Password : </b></label>
+                <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
+            </div>
+            <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
+        </form>
+    </div>
+</article>
+
 </html>
