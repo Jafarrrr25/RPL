@@ -17,75 +17,63 @@ class Supir extends BaseController
         // $session = session();
         // if ($session->has('username')) {
         helper('form');
-        // Memeriksa apakah melakukan submit data atau tidak.
-        if (!$this->request->is('post')) {
-            return view('/Supir/addSupir');
-        }
+       
 
         $validationRule = [
-            'userfile' => [
+            'foto_supir' => [
                 'label' => 'Image File',
                 'rules' => [
-                    'uploaded[userfile]',
-                    'is_image[userfile]',
-                    'mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
-                    'max_size[userfile,100]',
-                    'max_dims[userfile,1024,768]',
+                    'uploaded[foto_supir]',
+                    'is_image[foto_supir]',
+                    'mime_in[foto_supir,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                    'max_size[foto_supir,100]',
+                    'max_dims[foto_supir,1024,768]',
                 ],
             ],
         ];
 
         // Mengambil data yang disubmit dari form
-        $post = $this->request->getPost([
-            'idSupir', 'nama_supir', 'alamat_supir', 'no_telp_supir', 'foto_supir'
-        ]);
+        // $post = $this->request->getPost([
+        //     'idSupir', 'nama_supir', 'alamat_supir', 'no_telp_supir', 'foto_supir'
+        // ]);
 
-        if (!$this->validate($validationRule)) {
-            $data = ['errors' => $this->validator->getErrors()];
-
+         // Memeriksa apakah melakukan submit data atau tidak.
+         if (!$this->request->is('post')) {
             return view('/Supir/addSupir');
         }
 
-        $img = $this->request->getFile('userfile');
-        if (!$img->hasMoved()) {
-            $filepath = WRITEPATH . 'uploads/' . $img->store();
+        if (!$this->validate($validationRule)) {
+            $data = ['errors' => $this->validator->getErrors()];
 
-            $data = ['uploaded_fileinfo' => new File($filepath)];
+            return view('/Supir/addSupir', $data);
         }
-        // Mengakses Model untuk menyimpan data
-        $model = model(ModelSupir::class);
-        $model->simpan($post);
-        return view('/Supir/Success');
+
+        if ($this->request->getFiles()) {
+
+            // Generate nama unik untuk file
+            $idSupir = $this->request->getPost(["idSupir"]);
+            $nama_supir = $this->request->getPost(["nama_supir"]);
+            $alamat_supir = $this->request->getPost(["alamat_supir"]);
+            $no_telp_supir = $this->request->getPost(["no_telp_supir"]);
+            $img = $this->request->getFile('foto_supir');
+
+            $image = file_get_contents($img->getRealPath());
+
+            // Mengakses Model untuk menyimpan data
+            $model = model(ModelSupir::class);
+            $model->insert([
+                'idSupir' => $idSupir,
+                'nama_supir' => $nama_supir,
+                'alamat_supir' => $alamat_supir,
+                'no_telp_supir' => $no_telp_supir,
+                'foto_supir' => $image
+            ]);
+            return view('/Supir/SuccessSupir');
+        } else {
+            return view('/Supir/Error');
+        }
         // } else {
         //     return view('/Supir/addSupir');
         // } 
-    }
-
-    public function addData()
-    {
-        helper(['form', 'url']);
-
-        $validationRule = [
-            'userfile' => [
-                'label' => 'Image File',
-                'rules' => [
-                    'uploaded[userfile]',
-                    'is_image[userfile]',
-                    'mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
-                    'max_size[userfile,100]',
-                    'max_dims[userfile,1024,768]',
-                ],
-            ],
-        ];
-
-        if (!$this->validate($validationRule)) {
-            $data = ['errors' => $this->validator->getErrors()];
-            return view('Supir/addSupir', $data);
-        }
-
-        $model = new ModelSupir();
-        $model->simpan($this->request->getPost());
-
-        return view('Supir/addSupir');
     }
 }

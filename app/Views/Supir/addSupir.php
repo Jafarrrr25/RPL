@@ -14,7 +14,8 @@
     <article>
         <div class="container mt-2">
             <h1>Tambah Data Supir</h1>
-            <form action="simpan" method="post">
+            <!-- <form action="simpan" method="post"> -->
+            <?php echo form_open_multipart('supir/simpan'); ?>
                 <? csrf_field() ?>
                 <div class="form-group">
                     <label for="nim"><b>ID Supir :</b> </label>
@@ -25,7 +26,7 @@
                     <input type="text" class="form-control" name="nama_supir" id="nama_supir" placeholder="Nama Supir">
                 </div>
                 <div class="form-group">
-                    <label for="ipk"><b>Nomor Plat : </b></label>
+                    <label for="ipk"><b>Alamat Supir : </b></label>
                     <input type="text" class="form-control" name="alamat_supir" id="alamat_supir" placeholder="Alamat Supir">
                 </div>
                 <div class="form-group">
@@ -37,7 +38,8 @@
                     </div>
 
                     <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
-            </form>
+            <!-- </form> -->
+        <?php form_close();?>
         </div>
     </article>
 </body>

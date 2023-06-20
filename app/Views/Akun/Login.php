@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Login Page</title>
 </head>
 
@@ -29,21 +30,23 @@
             /* Adjust the spacing between label and input */
         }
     </style>
-    <div class="container">
-        <form action="/Login/check" method="post">
-            <?= csrf_field() ?>
-            <p>
-                <label for="name">User: </label>
-                <input type="text" name="usr" /><br>
-            </p>
-            <p>
-                <label for="name">Password: </label>
-                <input type="password" name="pwd" /><br>
-            </p>
-            <input type="submit" name="submit" value="Login" />
-        </form>
-    </div>
-
 </body>
-
+<article>
+        <div class="container mt-2">
+            <h1>Tambah Data Mobil</h1>
+            <form action="check" method="post">
+                <? csrf_field() ?>
+                
+                <div class="form-group">
+                    <label for="usr"><b>Username : </b></label>
+                    <input type="text" class="form-control" name="usr" id="usr" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="pwd"><b>Password : </b></label>
+                    <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
+                </div>
+                <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
+            </form>
+        </div>
+    </article>
 </html>

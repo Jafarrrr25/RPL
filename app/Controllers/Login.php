@@ -33,5 +33,9 @@ class Login extends BaseController
 
     public function login()
     {
+        $user = $this->request->getPost('usr');
+        $pass = $this->request->getPost('pwd');
+
+
     }
 }

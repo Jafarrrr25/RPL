@@ -76,32 +76,4 @@ class Mobil extends BaseController
         //     return view('/Mobil/addMobil');
         // } 
     }
-
-    public function addData()
-    {
-        helper(['form', 'url']);
-
-        $validationRule = [
-            'userfile' => [
-                'label' => 'Image File',
-                'rules' => [
-                    'uploaded[userfile]',
-                    'is_image[userfile]',
-                    'mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
-                    'max_size[userfile,100]',
-                    'max_dims[userfile,1024,768]',
-                ],
-            ],
-        ];
-
-        if (!$this->validate($validationRule)) {
-            $data = ['errors' => $this->validator->getErrors()];
-            return view('Mobil/addMobil', $data);
-        }
-
-        $model = new ModelMobil();
-        $model->simpan($this->request->getPost());
-
-        return view('Mobil/addMobil');
-    }
 }
