@@ -20,7 +20,7 @@
                         <th scope="col">Nama Supir</th>
                         <th scope="col">Alamat Supir</th>
 
-                        <th scope="col">Tanggal Pajak</th>
+                     
 
                         <th scope="col">no telepon Supir</th>
 
@@ -39,11 +39,11 @@
                                 <td><?php echo $row['nama_supir']; ?></td> <!-- //Bisa diganti dengan NAMA-->
                                 <td><?php echo $row['alamat_supir']; ?></td> <!-- //Bisa diganti dengan PRAKTIKUM-->
 
-                                <td><?php echo $row['tanggal_pajak']; ?></td> <!-- //Bisa diganti dengan NIM-->
+                        
 
                                 <td><?php echo $row['no_telp_supir']; ?></td> <!-- //Bisa diganti dengan PRAKTIKUM-->
 
-                                <td><?php echo $row['foto']; ?></td>
+                                <td><img src="data:image/jpeg;base64,<?php echo base64_encode($row['foto_supir']); ?>" alt="Foto Supir" width="100" height="100"></td>
                             </tr>
                     <?php  }
                     } ?>
