@@ -16,7 +16,10 @@
     <div class="container">
         <div class="col">
             <div class="row">
-                Program ini Merupakan Program untuk Melalukan Sewa Mobil
+                <p class="tulisan">
+                    Program ini Merupakan Program untuk Melalukan Sewa Mobil
+                </p>
+
             </div>
         </div>
     </div>

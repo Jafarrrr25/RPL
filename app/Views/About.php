@@ -16,11 +16,14 @@
     <div class="container">
         <div class="col">
             <div class="row">
-                Program Ini Dibuat Oleh Kelompok 5:<br>
-                Fajar Al najiim (215314006)<br>
-                Muhammad Rizky Fajar Mali (215314014)<br>
-                Basilius Arilla Dimas Nanggalih (215314019)<br>
-                Ajitama Jaya (215314020)<br>
+                <p class="tulisan">
+                    Program Ini Dibuat Oleh Kelompok 5:<br>
+                    Fajar Al najiim (215314006)<br>
+                    Muhammad Rizky Fajar Mali (215314014)<br>
+                    Basilius Arilla Dimas Nanggalih (215314019)<br>
+                    Ajitama Jaya (215314020)<br>
+                </p>
+
             </div>
         </div>
     </div>
