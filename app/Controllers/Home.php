@@ -8,7 +8,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('/Akun/Login');
+        return view('/HomeCust');
     }
 
     public function about()
