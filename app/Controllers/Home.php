@@ -10,7 +10,6 @@ class Home extends BaseController
     {
         return view('/HomeCust');
     }
-
     public function about()
     {
         return view('About');
@@ -19,7 +18,6 @@ class Home extends BaseController
     {
         return view('/HomeAdmin');
     }
-
     public function help()
     {
         return view('Help');

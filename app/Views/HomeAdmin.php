@@ -34,8 +34,8 @@
                                     Kelola
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Mobil</a></li>
-                                    <li><a class="dropdown-item" href="#">Supir</a></li>
+                                    <li><a class="dropdown-item" href="/Mobil/dataMobil">Mobil</a></li>
+                                    <li><a class="dropdown-item" href="/dataSupir">Supir</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
