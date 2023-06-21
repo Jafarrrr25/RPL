@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Tambah Supir</title>
+
+    <link rel="stylesheet" href="/css/stylesupir.css">
 </head>
 
 <body>
@@ -16,31 +18,31 @@
             <h1>Tambah Data Supir</h1>
             <!-- <form action="simpan" method="post"> -->
             <?php echo form_open_multipart('supir/simpan'); ?>
-                <? csrf_field() ?>
+            <? csrf_field() ?>
+            <div class="form-group">
+                <label for="nim"><b>ID Supir :</b> </label>
+                <input type="text" class="form-control" name="idSupir" id="idSupir" aria-describedby="nim" placeholder="ID Supir">
+            </div>
+            <div class="form-group">
+                <label for="nama"><b>Nama Supir : </b> </label>
+                <input type="text" class="form-control" name="nama_supir" id="nama_supir" placeholder="Nama Supir">
+            </div>
+            <div class="form-group">
+                <label for="ipk"><b>Alamat Supir : </b></label>
+                <input type="text" class="form-control" name="alamat_supir" id="alamat_supir" placeholder="Alamat Supir">
+            </div>
+            <div class="form-group">
+                <label for="ipk"><b>No Telefon Supir : </b></label>
+                <input type="text" class="form-control" name="no_telp_supir" id="no_telp_supir" placeholder="no telp supir">
                 <div class="form-group">
-                    <label for="nim"><b>ID Supir :</b> </label>
-                    <input type="text" class="form-control" name="idSupir" id="idSupir" aria-describedby="nim" placeholder="ID Supir">
+                    <label for="foto"><b>Foto Supir :</b></label>
+                    <input type="file" class="form-control" name="foto_supir" id="foto_supir" accept="image/*">
                 </div>
-                <div class="form-group">
-                    <label for="nama"><b>Nama Supir : </b> </label>
-                    <input type="text" class="form-control" name="nama_supir" id="nama_supir" placeholder="Nama Supir">
-                </div>
-                <div class="form-group">
-                    <label for="ipk"><b>Alamat Supir : </b></label>
-                    <input type="text" class="form-control" name="alamat_supir" id="alamat_supir" placeholder="Alamat Supir">
-                </div>
-                <div class="form-group">
-                    <label for="ipk"><b>No Telefon Supir : </b></label>
-                    <input type="text" class="form-control" name="no_telp_supir" id="no_telp_supir" placeholder="no telp supir">
-                    <div class="form-group">
-                        <label for="foto"><b>Foto Supir :</b></label>
-                        <input type="file" class="form-control" name="foto_supir" id="foto_supir" accept="image/*">
-                    </div>
 
-                    <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
-            <!-- </form> -->
-        <?php form_close();?>
-        </div>
+                <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
+                <!-- </form> -->
+                <?php form_close(); ?>
+            </div>
     </article>
 </body>
 
