@@ -56,7 +56,6 @@
                     </div>
                 </nav>
             </div>
-            <img src="/image/background.jpg" class="img-fluid" alt="Anjay">
         </div>
 </body>
 

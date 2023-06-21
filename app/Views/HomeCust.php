@@ -11,10 +11,6 @@
 </head>
 
 <body>
-    <div class="container p-5 bg-dark text-warning text-center">
-        <img src="https://i.pinimg.com/564x/49/ac/3e/49ac3e04d48faea4cf82a2c56e0e91b8.jpg" class="img-fluid" alt="Anjay">
-        <h1>Rental Mali Anjay Mabar</h1>
-    </div>
     <div class="container">
         <div class="col">
             <div class="row">
