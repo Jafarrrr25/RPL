@@ -55,7 +55,7 @@
             <div class="form-group">
                 <label for="nim"><b>Tanggal Pinjam :</b> </label>
                 <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
-            </div>
+            </div> 
 
             <div class="form-group">
                 <label for="nim"><b>Tanggal Kembali :</b> </label>
