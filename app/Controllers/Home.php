@@ -15,6 +15,10 @@ class Home extends BaseController
     {
         return view('About');
     }
+    public function admin()
+    {
+        return view('/HomeAdmin');
+    }
 
     public function help()
     {
