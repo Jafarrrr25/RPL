@@ -31,16 +31,18 @@ class Mobil extends BaseController
             ],
         ];
 
+         // Memeriksa apakah melakukan submit data atau tidak.
+         if (!$this->request->is('post')) {
+            return view('/Mobil/addMobil');
+        }
+
         if (! $this->validate($validationRule)) {
             $data = ['errors' => $this->validator->getErrors()];
 
             return view('Mobil/addMobil', $data);
         }
 
-        // Memeriksa apakah melakukan submit data atau tidak.
-        if (!$this->request->is('post')) {
-            return view('/Mobil/addMobil');
-        }
+       
 
         if ($this->request->getFiles()) {
 

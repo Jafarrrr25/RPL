@@ -63,7 +63,7 @@
             </div>
 
 
-            <input type="submit" name="" value="Kirim" class="btn btn-primary mt-2" />
+            <input type="submit" name="" value="Kirim " class="btn btn-primary mt-2" />
             </form>
         </div>
     </article>
