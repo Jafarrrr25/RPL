@@ -6,6 +6,6 @@ class Formulir extends BaseController
 {
     public function index()
     {
-        return view('/Formulir/Formulir_Sewa');
+        return view('/Formulir/Formulir_Sewa'); 
     }
 }

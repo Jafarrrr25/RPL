@@ -23,7 +23,7 @@
                 <label for="nim"><b>ID Supir :</b> </label>
                 <input type="text" class="form-control" name="idSupir" id="idSupir" aria-describedby="nim" placeholder="ID Supir">
             </div>
-            <!-- <div class="form-group">
+            <div class="form-group">
                 <label for="nama"><b>Nama Supir : </b> </label>
                 <input type="text" class="form-control" name="nama_supir" id="nama_supir" placeholder="Nama Supir">
             </div>
@@ -37,7 +37,7 @@
                 <div class="form-group">
                     <label for="foto"><b>Foto Supir :</b></label>
                     <input type="file" class="form-control" name="foto_supir" id="foto_supir" accept="image/*">
-                </div> -->
+                </div>
 
                 <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
                 <!-- </form> -->
