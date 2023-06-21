@@ -13,47 +13,58 @@
 <body>
     <article>
         <div class="container mt-2">
-            <h1>Tambah Data Mobil</h1>
-            <?php echo form_open_multipart('simpan'); ?>
+            <h1>Formulir Pengisian Penyewaan Mobil</h1>
+            <form action="simpan" method="get"></form>
             <? csrf_field() ?>
+
             <div class="form-group">
-                <label for="nama"><b>Pilih : </b> </label>
-                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Kendaraan">
+                <label for="ipk"><b>Nama Penyewa : </b></label>
+                <input type="text" class="form-control" name="plat" id="plat" placeholder="Plat Mobil">
             </div>
-            <div class="form-group">
-                <label for="ipk"><b>Nomor Plat : </b></label>
-                <input type="text" class="form-control" name="plat" id="plat" placeholder="Plat Mobil" value="AB">
-            </div>
-            <div class="form-group">
-                <label for="ipk"><b>Tipe Mobil : </b></label>
-                <input type="text" class="form-control" name="tipe" id="tipe" placeholder="Tipe Mobil">
-            </div>
-            <div class="form-group">
-                <label for="nim"><b>Tanggal Pajak :</b> </label>
-                <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
-            </div>
+
             <div class="form-group ">
-                <label for="status"><b>Status Mobil : </b></label>
+                <label for="status"><b>Pilih Mobil : </b></label>
                 <select name="status" id="status" class="form-control col-sm-12">
                     <option selected>Tersedia</option>
-                    <option>Tidak Tersedia</option>
+                    <?php $db = \Config\Database::connect();
+                    $query = $db->query('Select * from mobil');
+
+                    $row = $query->getRow();
+                    foreach ($query->getResult('array') as $row) {
+                        if (isset($row)) { ?>
+                        <option><?php echo $row['nama_kendaraan']; ?></option>
+                        <?php } }?>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="ipk"><b>Warna : </b></label>
-                <input type="text" class="form-control" name="warna" id="warna" placeholder="Warna Mobil">
+
+            <div class="form-group ">
+                <label for="status"><b>Pilih Sopir : </b></label>
+                <select name="status" id="status" class="form-control col-sm-12">
+                    <option selected>Tidak dengan Sopir</option>
+                    <?php $db = \Config\Database::connect();
+                    $query = $db->query('Select * from supir');
+
+                    $row = $query->getRow();
+                    foreach ($query->getResult('array') as $row) {
+                        if (isset($row)) { ?>
+                        <option><?php echo $row['nama_supir']; ?></option>
+                        <?php } }?>
+                </select>
             </div>
+
             <div class="form-group">
-                <label for="ipk"><b>Harga Sewa : </b></label>
-                <input type="number" class="form-control" name="sewa" id="sewa" placeholder="Harga Sewa">
+                <label for="nim"><b>Tanggal Pinjam :</b> </label>
+                <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
             </div>
+
             <div class="form-group">
-                <label for="foto"><b>Unggah Foto Mobil :</b></label>
-                <input type="file" class="form-control" name="foto" id="foto" accept="image/*">
-                <h6 class="text-info">File Maksimal berukuran 1mb</h6>
+                <label for="nim"><b>Tanggal Kembali :</b> </label>
+                <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
             </div>
-            <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
-            <?php form_close(); ?>
+
+
+            <input type="submit" name="" value="Kirim" class="btn btn-primary mt-2" />
+            </form>
         </div>
     </article>
 </body>

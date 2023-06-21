@@ -43,7 +43,7 @@ $routes->get('/admin', 'Home::admin');
 $routes->get('/about', 'Home::about');
 $routes->get('/help', 'Home::help');
 $routes->match(['get', 'post'], 'akun/register', [Login::class, 'register']);
-$routes->match(['get', 'post'], 'formulir/Formulir_Sewa', [Formulir::class, 'index']);
+$routes->match(['get', 'post'], 'formulir/formulir_Sewa', [Formulir::class, 'index']);
 $routes->match(['get', 'post'], 'mobil/showDataMobil', [Mobil::class, 'showData']);
 $routes->match(['get', 'post'], 'mobil/addData', [Mobil::class, 'simpan']);
 $routes->match(['get', 'post'], 'mobil/simpan', [Mobil::class, 'simpan']);
