@@ -8,21 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+    <link rel="stylesheet" href="/css/styleabout.css">
 </head>
 
 <body>
-    <div class="container p-5 bg-dark text-warning text-center">
-        <img src="https://i.pinimg.com/564x/49/ac/3e/49ac3e04d48faea4cf82a2c56e0e91b8.jpg" class="img-fluid" alt="Anjay">
-        <h1>Rental Mali Anjay Mabar</h1>
-    </div>
     <div class="container">
         <div class="col">
             <div class="row">
-                Program Ini Dibuat Oleh Kelompok 5:
-                Fajar Al najiim (215314006)
-                Muhammad Rizky Fajar Mali (215314014)
-                Basilius Arilla Dimas Nanggalih (215314019)
-                Ajitama Jaya (215314020)
+                Program Ini Dibuat Oleh Kelompok 5:<br>
+                Fajar Al najiim (215314006)<br>
+                Muhammad Rizky Fajar Mali (215314014)<br>
+                Basilius Arilla Dimas Nanggalih (215314019)<br>
+                Ajitama Jaya (215314020)<br>
             </div>
         </div>
     </div>
