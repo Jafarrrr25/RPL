@@ -20,9 +20,24 @@ class Home extends BaseController
     {
         return view('Help');
     }
-
-    public function admin()
+    public function login()
     {
-        return view('HomeAdmin');
+        return view('/Login');
+    }
+    public function register()
+    {
+        return view('/Register');
+    }
+    public function mobil()
+    {
+        return view('/dataMobil');
+    }
+    public function supir()
+    {
+        return view('Supir/dataSupir');
+    }
+    public function sewa()
+    {
+        return view('/Formulir_Sewa');
     }
 }

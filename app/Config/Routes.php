@@ -39,9 +39,14 @@ use App\Controllers\Home;
 use App\Controllers\Supir;
 
 $routes->get('/', 'Home::index');
+$routes->get('/login', 'Home::login');
+$routes->get('/register', 'Home::register');
 $routes->get('/admin', 'Home::admin');
 $routes->get('/about', 'Home::about');
 $routes->get('/help', 'Home::help');
+// $routes->get('/supir', 'Home::supir');
+// $routes->get('/mobil', 'Home::mobil');
+// $routes->get('/sewa', 'Home::sewa');
 $routes->match(['get', 'post'], 'akun/register', [Login::class, 'register']);
 $routes->match(['get', 'post'], 'formulir', [Formulir::class, 'index']);
 $routes->match(['get', 'post'], 'mobil/showDataMobil', [Mobil::class, 'showData']);
