@@ -22,7 +22,7 @@
             <div class="form-group">
                 <label for="nama"><b>Nomor Polisi : </b> </label>
                 <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Kendaraan">
-            </div>
+            </div> 
             <!-- <div class="form-group">
                 <label for="ipk"><b>Nomor Plat : </b></label>
                 <input type="text" class="form-control" name="plat" id="plat" placeholder="Plat Mobil" value="AB">
