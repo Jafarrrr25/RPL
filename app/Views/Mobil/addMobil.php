@@ -15,15 +15,15 @@
 <body>
     <article>
         <div class="container mt-2">
-            <h1>Hapus Data Mobil</h1>
+            <h1>Tambah Data Mobil</h1>
             <!-- <form action="addData" method="post"> -->
             <?php echo form_open_multipart('mobil/simpan'); ?>
             <? csrf_field() ?>
             <div class="form-group">
-                <label for="nama"><b>Nomor Polisi : </b> </label>
+                <label for="nama"><b>Nama Kendaraan : </b> </label>
                 <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Kendaraan">
-            </div> 
-            <!-- <div class="form-group">
+            </div>
+            <div class="form-group">
                 <label for="ipk"><b>Nomor Plat : </b></label>
                 <input type="text" class="form-control" name="plat" id="plat" placeholder="Plat Mobil" value="AB">
             </div>
@@ -54,7 +54,7 @@
                 <label for="foto"><b>Unggah Foto Mobil :</b></label>
                 <input type="file" class="form-control" name="foto" id="foto" accept="image/*">
                 <h6 class="text-info">File Maksimal berukuran 1mb</h6>
-            </div> -->
+            </div>
 
             <!-- <div class="form-group">
                     <label for="ipk"><b>Unggah Foto Mobil : </b></label>
