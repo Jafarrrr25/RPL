@@ -27,15 +27,15 @@
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Formulir Customer</a>
+                                <a class="nav-link" href="#">Verifikasi</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Kelola
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/Mobil/dataMobil">Mobil</a></li>
-                                    <li><a class="dropdown-item" href="/dataSupir">Supir</a></li>
+                                    <li><a class="dropdown-item" href="mobil/showDataMobil">Mobil</a></li>
+                                    <li><a class="dropdown-item" href="supir/showDataSupir">Supir</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -48,11 +48,6 @@
                                 <a class="nav-link" href="/help">Help</a>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>&nbsp
-                        <a href="" class="btn btn-danger">logout</a>
                     </div>
                 </nav>
             </div>

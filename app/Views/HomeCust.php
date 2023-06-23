@@ -28,7 +28,7 @@
                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/formulir">Sewa</a>
+                                    <a class="nav-link" href="formulir/formulir_Sewa">Sewa</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/about">About Us</a>
@@ -37,9 +37,6 @@
                                     <a class="nav-link" href="/help">Help</a>
                                 </li>
                             </ul>
-                            <form class="d-flex">
-                                <input type="submit" value="Logout" class="btn btn-danger">
-                            </form>
                         </div>
                     </div>
                 </nav>
