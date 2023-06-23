@@ -7,12 +7,11 @@ use CodeIgniter\Model;
 class ModelRegister extends Model
 {
     protected $table = 'customer';
-    protected $allowedFields = ['idCustomer', 'username', 'password', 'nama', 'alamat', 'email', 'no_telp'];
+    protected $allowedFields = ['username', 'password', 'nama', 'alamat', 'email', 'no_telp'];
 
     public function simpan($record)
     {
         $this->save([
-            'idCustomer' => $record['idCustomer'],
             'username' => $record['username'],
             'password' => $record['password'],
             'nama' => $record['nama'],

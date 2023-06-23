@@ -20,7 +20,7 @@
         // Process the form data
 
         // Retrieve the form values
-        $idCustomer = $_POST['idCustomer'];
+        // $idCustomer = $_POST['idCustomer'];
         $username = $_POST['username'];
         $password = $_POST['password'];
         $nama = $_POST['nama'];
@@ -40,10 +40,10 @@
             <div class="col">
                 <div class="row">
                     <h2 class="mt-5">Registration Form</h2>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="idCustomer" class="form-label">Id Customer:</label>
                         <input type="idCustomer" id="idCustomer" name="idCustomer" class="form-control" required>
-                    </div>
+                    </div> -->
 
                     <div class="mb-3">
                         <label for="username" class="form-label">Username:</label>

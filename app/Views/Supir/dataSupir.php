@@ -51,11 +51,11 @@
                     } ?>
                 </tbody>
             </table>
-            <a href="/asisten/simpan" class="btn btn-primary">Tambah Supir</a>
-            <a href="/asisten/update" class="btn btn-primary">Update Supir</a>
-            <a href="/asisten/hapus" class="btn btn-danger">Hapus Supirr</a>
-            <a href="/asisten/search" class="btn btn-primary">Cari</a>
-            <a href="/asisten/logout" class="btn btn-primary">Log Out</a>
+            <a href="/supir/simpan" class="btn btn-primary">Tambah Supir</a>
+            <a href="/supir/update" class="btn btn-primary">Update Supir</a>
+            <a href="/supir/hapus" class="btn btn-danger">Hapus Supirr</a>
+            <a href="/supir/search" class="btn btn-primary">Cari</a>
+            <a href="/supir/logout" class="btn btn-primary">Log Out</a>
         </div>
 
     </article>

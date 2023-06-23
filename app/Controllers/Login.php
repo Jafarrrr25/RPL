@@ -18,8 +18,8 @@ class Login extends BaseController
 
     public function register()
     {
-        $session = session();
-        if ($session->has('usr')) {
+        //$session = session();
+        // if ($session->has('usr')) {
         helper('form');
         // Memeriksa apakah melakukan submit data atau tidak.
         if (!$this->request->is('post')) {
@@ -27,20 +27,20 @@ class Login extends BaseController
         }
         // Mengambil data yang disubmit dari form
         $post = $this->request->getPost([
-            'idCustomer', 'username', 'password', 'nama', 'alamat', 'email', 'no_telp'
+            'username', 'password', 'nama', 'alamat', 'email', 'no_telp'
         ]);
         // Mengakses Model untuk menyimpan data
         $model = model(ModelRegister::class);
         $model->simpan($post);
         return view('/Akun/Success');
-        } else {
-            return view('/Akun/Register');
-        }
-    }
+    } //else {
+    //     return view('/Akun/Error');
+    // }
+    // }
 
     public function login()
     {
-        
+
         $model = model(UserModel::class);
         $post = $this->request->getPost(['usr', 'pwd']);
         $user = $model->user(($post['usr']));
@@ -53,6 +53,5 @@ class Login extends BaseController
         } else {
             return view('/Akun/login');
         }
-
     }
 }
