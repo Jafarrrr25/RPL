@@ -49,7 +49,7 @@ class Login extends BaseController
             $session = session();
             $session->set('username', $post['usr']);
             $session->set('password', $post['pwd']);
-            return view('/');
+            return view('HomeCust');
         } else {
             return view('/Akun/login');
         }
