@@ -39,6 +39,7 @@ use App\Controllers\Supir;
 
 $routes->post('/', 'Home::index');
 $routes->get('/', 'Home::index');
+$routes->post('/', 'Home::index');
 $routes->get('/admin', 'Home::admin');
 $routes->get('/about', 'Home::about');
 $routes->get('/help', 'Home::help');
