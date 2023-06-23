@@ -11,8 +11,8 @@ class Login extends BaseController
 
     public function register()
     {
-        // $session = session();
-        // if ($session->has('username')) {
+        $session = session();
+        if ($session->has('username')) {
         helper('form');
         // Memeriksa apakah melakukan submit data atau tidak.
         if (!$this->request->is('post')) {
@@ -26,9 +26,9 @@ class Login extends BaseController
         $model = model(ModelRegister::class);
         $model->simpan($post);
         return view('/Akun/Success');
-        // } else {
-        //     return view('/Akun/Register');
-        // }
+        } else {
+            return view('/Akun/Register');
+        }
     }
 
     public function login()
@@ -36,6 +36,18 @@ class Login extends BaseController
         $user = $this->request->getPost('usr');
         $pass = $this->request->getPost('pwd');
 
+        $post = $this->request->getPost(['usr', 'pwd']);
+        $model = model(LoginAsisten::class);
+        $user = $model->user(($post['usr']));
+        $pwd = $model->user(($post['usr']));
+        if ($user  && $pwd) {
+            $session = session();
+            $session->set('username', $post['usr']);
+            $session->set('password', $post['pwd']);
+            return view('/asisten/AsistenView');
+        } else {
+            return view('/asisten/login');
+        }
 
     }
 }
