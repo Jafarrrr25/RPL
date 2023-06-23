@@ -20,7 +20,6 @@
             // Process the form data
 
             // Retrieve the form values
-            $idCustomer = $_POST['idCustomer'];
             $username = $_POST['username'];
             $password = $_POST['password'];
             $nama = $_POST['nama'];
@@ -36,11 +35,6 @@
         ?>
 
         <form method="POST" action="">
-            <div class="mb-3">
-                <label for="idCustomer" class="form-label">Id Customer:</label>
-                <input type="idCustomer" id="idCustomer" name="idCustomer" class="form-control" required>
-            </div>
-
             <div class="mb-3">
                 <label for="username" class="form-label">Username:</label>
                 <input type="username" id="username" name="username" class="form-control" required>
