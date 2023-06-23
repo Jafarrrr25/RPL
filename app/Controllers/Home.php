@@ -8,6 +8,10 @@ class Home extends BaseController
 {
     public function index()
     {
+        return view('akun/login');
+    }
+    public function cust()
+    {
         return view('/HomeCust');
     }
     public function about()
@@ -33,7 +37,7 @@ class Home extends BaseController
     public function sewa()
     {
         $session = session();
-        
+
         return view('Formulir/Formulir_Sewa');
     }
 }

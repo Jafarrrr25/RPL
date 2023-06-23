@@ -34,9 +34,8 @@
 <article>
     <div class="container mt-2">
         <h1>Login Cok</h1>
-        <form action="http://localhost:8081/home" method="post">
+        <form action="/customer" method="POST">
             <? csrf_field() ?>
-
             <div class="form-group">
                 <label for="usr"><b>Username : </b></label>
                 <input type="text" class="form-control" name="usr" id="usr" placeholder="Username">

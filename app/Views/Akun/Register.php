@@ -35,7 +35,7 @@
     }
     ?>
 
-    <form method="POST" action="">
+    <form method="POST" action="/">
         <div class="container">
             <div class="col">
                 <div class="row">
