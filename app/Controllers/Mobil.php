@@ -18,7 +18,9 @@ class Mobil extends BaseController
         // if ($session->has('username')) {
         helper('form');
 
-        $validationRule = [
+        
+
+        $validationRules = [
             'foto' => [
                 'label' => 'Image File',
                 'rules' => [
@@ -31,19 +33,19 @@ class Mobil extends BaseController
             ],
         ];
 
-         // Memeriksa apakah melakukan submit data atau tidak.
-         if (!$this->request->is('post')) {
-            return view('/Mobil/addMobil');
-        }
+        
 
-        if (! $this->validate($validationRule)) {
+        if (! $this->validate($validationRules)) {
             $data = ['errors' => $this->validator->getErrors()];
 
             return view('Mobil/addMobil', $data);
         }
 
-       
 
+        // Memeriksa apakah melakukan submit data atau tidak.
+        if (!$this->request->is('post')) {
+            return view('/Mobil/addMobil');
+        }
         if ($this->request->getFiles()) {
 
             // Generate nama unik untuk file

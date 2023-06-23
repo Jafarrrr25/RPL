@@ -2,8 +2,15 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
 class Login extends BaseController
 {
+    protected $login;
+    public function __construct()
+    {
+        $this->login = new UserModel();
+    }
     public function index()
     {
         return view('welcome_message');
@@ -12,7 +19,7 @@ class Login extends BaseController
     public function register()
     {
         $session = session();
-        if ($session->has('username')) {
+        if ($session->has('usr')) {
         helper('form');
         // Memeriksa apakah melakukan submit data atau tidak.
         if (!$this->request->is('post')) {
@@ -33,20 +40,18 @@ class Login extends BaseController
 
     public function login()
     {
-        $user = $this->request->getPost('usr');
-        $pass = $this->request->getPost('pwd');
-
+        
+        $model = model(UserModel::class);
         $post = $this->request->getPost(['usr', 'pwd']);
-        $model = model(LoginAsisten::class);
         $user = $model->user(($post['usr']));
-        $pwd = $model->user(($post['usr']));
+        $pwd = $model->user(($post['pwd']));
         if ($user  && $pwd) {
             $session = session();
             $session->set('username', $post['usr']);
             $session->set('password', $post['pwd']);
-            return view('/asisten/AsistenView');
+            return view('/');
         } else {
-            return view('/asisten/login');
+            return view('/Akun/login');
         }
 
     }
