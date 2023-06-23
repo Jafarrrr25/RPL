@@ -37,6 +37,7 @@ use App\Controllers\Mobil;
 use App\Controllers\Login;
 use App\Controllers\Supir;
 
+$routes->post('/', 'Home::index');
 $routes->get('/', 'Home::index');
 $routes->post('/', 'Home::index');
 $routes->get('/admin', 'Home::admin');
