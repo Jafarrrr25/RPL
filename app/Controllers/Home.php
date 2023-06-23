@@ -30,16 +30,8 @@ class Home extends BaseController
     {
         return view('/Register');
     }
-    public function mobil()
-    {
-        return view('/dataMobil');
-    }
-    public function supir()
-    {
-        return view('Supir/dataSupir');
-    }
     public function sewa()
     {
-        return view('/Formulir_Sewa');
+        return view('Formulir/Formulir_Sewa');
     }
 }
