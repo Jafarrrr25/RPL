@@ -7,6 +7,10 @@ use App\Models\ModelMobil;
 
 class Mobil extends BaseController
 {
+    public function index()
+    {
+        return view('Mobil/addMobil');
+    }
     public function showData()
     {
         return view('Mobil/dataMobil');
@@ -15,12 +19,10 @@ class Mobil extends BaseController
     public function simpan()
     {
         $session = session();
-        // if ($session->has('username')) {
+        if ($session->has('username')) {
         helper('form');
 
-        
-
-        $validationRules = [
+        $validationRule = [
             'foto' => [
                 'label' => 'Image File',
                 'rules' => [
@@ -35,7 +37,7 @@ class Mobil extends BaseController
 
         
 
-        if (! $this->validate($validationRules)) {
+        if (! $this->validate($validationRule)) {
             $data = ['errors' => $this->validator->getErrors()];
 
             return view('Mobil/addMobil', $data);
@@ -76,8 +78,8 @@ class Mobil extends BaseController
         } else {            
             return view('/Mobil/Error');
         }
-        // } else {
-        //     return view('/Mobil/addMobil');
-        // } 
+        } else {
+            return view('/akun/Login');
+        } 
     }
 }

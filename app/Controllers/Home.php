@@ -32,6 +32,8 @@ class Home extends BaseController
     }
     public function sewa()
     {
+        $session = session();
+        
         return view('Formulir/Formulir_Sewa');
     }
 }
