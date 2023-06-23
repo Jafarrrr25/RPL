@@ -19,7 +19,7 @@
 
             <div class="form-group">
                 <label for="ipk"><b>Nama Penyewa : </b></label>
-                <input type="text" class="form-control" name="plat" id="plat" placeholder="Plat Mobil">
+                <input type="text" class="form-control" name="plat" id="plat" placeholder="Nama Penyewa">
             </div>
 
             <div class="form-group ">
@@ -32,8 +32,9 @@
                     $row = $query->getRow();
                     foreach ($query->getResult('array') as $row) {
                         if (isset($row)) { ?>
-                        <option><?php echo $row['nama_kendaraan']; ?></option>
-                        <?php } }?>
+                            <option><?php echo $row['nama_kendaraan']; ?></option>
+                    <?php }
+                    } ?>
                 </select>
             </div>
 
@@ -47,23 +48,23 @@
                     $row = $query->getRow();
                     foreach ($query->getResult('array') as $row) {
                         if (isset($row)) { ?>
-                        <option><?php echo $row['nama_supir']; ?></option>
-                        <?php } }?>
+                            <option><?php echo $row['nama_supir']; ?></option>
+                    <?php }
+                    } ?>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="nim"><b>Tanggal Pinjam :</b> </label>
                 <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
-            </div> 
+            </div>
 
             <div class="form-group">
                 <label for="nim"><b>Tanggal Kembali :</b> </label>
                 <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
             </div>
 
-
-            <input type="submit" name="" value="Kirim " class="btn btn-primary mt-2" />
+            <a href="/Formulir/Sukses" class="btn btn-primary mt-2">Kirim</a>
             </form>
         </div>
     </article>

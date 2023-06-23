@@ -31,20 +31,20 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 // Untuk Mobil 
-
+use App\Controllers\Home;
 use App\Controllers\Formulir;
 use App\Controllers\Mobil;
 use App\Controllers\Login;
-use App\Controllers\Home;
 use App\Controllers\Supir;
 
-$routes->post('/', 'Home::index');
+$routes->get('/', 'Home::index');
 $routes->get('/admin', 'Home::admin');
 $routes->get('/about', 'Home::about');
 $routes->get('/help', 'Home::help');
-$routes->match(['get', 'post'], 'akun/register', [Login::class, 'register']);
+$routes->match(['get', 'post'], '/register', [Login::class, 'register']);
 $routes->match(['get', 'post'], 'akun/login', [Login::class, 'login']);
 $routes->match(['get', 'post'], 'formulir/formulir_Sewa', [Formulir::class, 'index']);
+$routes->match(['get', 'post'], 'formulir/Sukses', [Formulir::class, 'simpan']);
 $routes->match(['get', 'post'], 'mobil/showDataMobil', [Mobil::class, 'showData']);
 $routes->match(['get', 'post'], 'mobil/addData', [Mobil::class, 'simpan']);
 $routes->match(['get', 'post'], 'mobil/simpan', [Mobil::class, 'simpan']);
