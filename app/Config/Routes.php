@@ -37,7 +37,7 @@ use App\Controllers\Mobil;
 use App\Controllers\Login;
 use App\Controllers\Supir;
 
-$routes->get('/', 'Home::index');
+$routes->get('/home', 'Home::index');
 $routes->get('/admin', 'Home::admin');
 $routes->get('/about', 'Home::about');
 $routes->get('/help', 'Home::help');
