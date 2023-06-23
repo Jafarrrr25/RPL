@@ -11,4 +11,9 @@ class UserModel extends Model
     protected $allowedFields = [
         'idCustomer', 'username', 'password', 'nama', 'alamat', 'email', 'no_telp'
     ];
+
+    public function user($usr)
+    {
+        return $this->where(['username' => $usr, 'password' => $usr])->first();
+    }
 }
