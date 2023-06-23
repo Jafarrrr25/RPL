@@ -37,7 +37,6 @@ use App\Controllers\Mobil;
 use App\Controllers\Login;
 use App\Controllers\Supir;
 
-$routes->post('/', 'Home::index');
 $routes->get('/', 'Home::index');
 $routes->post('/', 'Home::index');
 $routes->get('/admin', 'Home::admin');
@@ -46,6 +45,7 @@ $routes->get('/help', 'Home::help');
 $routes->get('/customer', 'Home::cust');
 $routes->match(['get', 'post'], '/register', [Login::class, 'register']);
 $routes->match(['get', 'post'], 'akun/login', [Login::class, 'login']);
+$routes->match(['get', 'post'], '/customer', [Login::class, 'open']);
 $routes->match(['get', 'post'], 'formulir/formulir_Sewa', [Formulir::class, 'index']);
 $routes->match(['get', 'post'], 'Formulir/Sukses', [Formulir::class, 'simpan']);
 $routes->match(['get', 'post'], 'mobil/showDataMobil', [Mobil::class, 'showData']);

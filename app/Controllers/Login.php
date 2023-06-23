@@ -40,12 +40,11 @@ class Login extends BaseController
 
     public function login()
     {
-
         $model = model(UserModel::class);
         $post = $this->request->getPost(['usr', 'pwd']);
         $user = $model->user(($post['usr']));
         $pwd = $model->user(($post['pwd']));
-        if ($user  && $pwd) {
+        if ($user && $pwd) {
             $session = session();
             $session->set('username', $post['usr']);
             $session->set('password', $post['pwd']);
@@ -53,5 +52,9 @@ class Login extends BaseController
         } else {
             return view('/Akun/login');
         }
+    }
+    public function open()
+    {
+        return view('HomeCust');
     }
 }
