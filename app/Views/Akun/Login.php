@@ -33,6 +33,7 @@
 </body>
 <article>
     <div class="container mt-2">
+        <h1>Login</h1>
         <form action="http://localhost:8081/customer" method="post">
             <? csrf_field() ?>
             <div class="form-group">
