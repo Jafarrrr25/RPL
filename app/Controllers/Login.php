@@ -13,7 +13,7 @@ class Login extends BaseController
     }
     public function index()
     {
-        return view('welcome_message');
+        return view('Akun/Login');
     }
 
     public function register()
@@ -38,23 +38,62 @@ class Login extends BaseController
     // }
     // }
 
-    public function login()
+    public function check()
     {
-        $model = model(UserModel::class);
+        $db = \Config\Database::connect();
+        $builder = $db->table('customer');
+
         $post = $this->request->getPost(['usr', 'pwd']);
-        $user = $model->user(($post['usr']));
-        $pwd = $model->user(($post['pwd']));
-        if ($user && $pwd) {
+        $builder->select('username, password');
+        $builder->where('username', $post['usr']);
+        $builder->where('password', $post['pwd']);
+        $query = $builder->get();
+        $result = $query->getRow();
+
+        if ($result && $result->username && $result->password) {
             $session = session();
-            $session->set('username', $post['usr']);
-            $session->set('password', $post['pwd']);
-            return view('HomeCust');
+            $session->set('pengguna', $post['usr']);
+            return view('Formulir/Formulir_Sewa');
         } else {
-            return view('/Akun/login');
+            return view('Akun/Error');
         }
     }
-    public function open()
+
+    public function home()
     {
-        return view('HomeCust');
+        $session = session();
+        if ($session->has('pengguna')) {
+            $item = $session->get('pengguna');
+            if ($item == 'admin') {
+                return view('Formulir/Formulir_Sewa');
+            } else {
+                return view('Akun/Login');
+            }
+        } else {
+            return view('Akun/Login');
+        }
+    }
+
+    // public function login()
+    // {
+    //     $model = model(UserModel::class);
+    //     $post = $this->request->getPost(['usr', 'pwd']);
+    //     $user = $model->user(($post['usr']));
+    //     $pwd = $model->user(($post['pwd']));
+    //     if ($user && $pwd) {
+    //         $session = session();
+    //         $session->set('username', $post['usr']);
+    //         $session->set('password', $post['pwd']);
+    //         return view('HomeCust');
+    //     } else {
+    //         return view('/Akun/login');
+    //     }
+    // }
+    
+    public function logout()
+    {
+        $sesssion = session();
+        $sesssion->remove('pengguna');
+        return view('Akun/Login');
     }
 }

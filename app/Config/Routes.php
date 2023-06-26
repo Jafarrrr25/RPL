@@ -15,6 +15,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
+$routes->setAutoRoute(true);
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -42,10 +43,11 @@ $routes->post('/', 'Home::index');
 $routes->get('/admin', 'Home::admin');
 $routes->get('/about', 'Home::about');
 $routes->get('/help', 'Home::help');
-$routes->get('/customer', 'Home::cust');
+$routes->get('akun/home', [Login::class, 'home']);
+$routes->get('Akun/logout', [Login::class, 'logout']);
+
 $routes->match(['get', 'post'], '/register', [Login::class, 'register']);
-$routes->match(['get', 'post'], 'akun/login', [Login::class, 'login']);
-$routes->match(['get', 'post'], '/customer', [Login::class, 'open']);
+$routes->match(['get', 'post'], 'Akun/check', [Login::class, 'check']);
 $routes->match(['get', 'post'], 'formulir/formulir_Sewa', [Formulir::class, 'index']);
 $routes->match(['get', 'post'], 'Formulir/Sukses', [Formulir::class, 'simpan']);
 $routes->match(['get', 'post'], 'mobil/showDataMobil', [Mobil::class, 'showData']);

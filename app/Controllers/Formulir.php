@@ -9,8 +9,8 @@ class Formulir extends BaseController
         return view('/formulir/Formulir_Sewa');
     }
 
-    public function simpan()
-    {
-        return view('/formulir/Sukses');
+     public function simpan()
+        {
+            return view('/Formulir/Sukses');
+        }
     }
-}
