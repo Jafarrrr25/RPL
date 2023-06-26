@@ -68,7 +68,6 @@
             </form>
         </div>
     </article>
-    <a href="/Akun/logout">Logout</a>
 </body>
 
 </html>

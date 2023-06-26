@@ -30,6 +30,7 @@
                         <a class="nav-link" href="#homeku">Home</a>
                         <a class="nav-link" href="formulir/formulir_Sewa">Sewa</a>
                         <a class="nav-link" href="#aboutku">About Us</a>
+                        <a class="nav-link" href="/Akun/logout">Logout</a>
                     </div>
                 </div>
             </div>

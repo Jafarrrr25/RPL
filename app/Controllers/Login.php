@@ -65,7 +65,7 @@ class Login extends BaseController
         if ($session->has('pengguna')) {
             $item = $session->get('pengguna');
             if ($item == 'admin') {
-                return view('Formulir_Sewa');
+                return view('Login/HomeCust');
             } else {
                 return view('Akun/Login');
             }
