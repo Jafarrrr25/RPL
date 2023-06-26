@@ -1,6 +1,6 @@
 :root {
-    --primary:#4765c0;
-    --bg : #010101;
+    --primary:#fcfcfc;
+    --bg : #ffffff;
 }
 
 * { 
@@ -13,7 +13,6 @@
 }
 
 body{
-    font-family: 'Times New Roman', Times, serif;
     background-color: var(--bg);
     /* background-image: url(/image/background.jpg); */
     background-repeat: no-repeat;
@@ -22,11 +21,12 @@ body{
 
 .navbar {
     display: flex;
+    font-family: 'Racing Sans One', cursive;
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: rgb(254, 251, 252);
-    border-bottom: 1px solid #eaebed;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ffffff;
     position: fixed;
     top: 0;
     left: 0;
@@ -34,17 +34,12 @@ body{
     z-index: 9999;
 }
 
-.navbar .navbar-logo{
-    font-size: 4rem;
-    font-weight: 500;
-    color: #4765c0;
-}
 
-.navbar .navbar-nav a {
-    color: rgb(5, 8, 11);
+.navbar-nav a {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
     display: inline-block;
     font-size: 1.4rem;
     margin: 0 1rem;
-
-
+    align-items: center;
 }

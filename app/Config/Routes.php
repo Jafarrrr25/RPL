@@ -43,6 +43,7 @@ $routes->post('/', 'Home::index');
 $routes->get('/admin', 'Home::admin');
 $routes->get('/about', 'Home::about');
 $routes->get('/help', 'Home::help');
+$routes->get('/customer', 'Home::cust');
 $routes->get('akun/home', [Login::class, 'home']);
 $routes->get('Akun/logout', [Login::class, 'logout']);
 
