@@ -55,7 +55,7 @@
             <div class="content">
                 <h3>Mengapa Rental Kami????</h3>
                 <P>Rental mobil DVJR memiliki banyak pilihan mobil, antara lain mobil keluarga, mobil adventur, city car dan masih banyak lagi.</P>
-                <p>Harga yang kami tawarkan sanagat murah dan beraneka ragam. </p>
+                <p>Harga yang kami tawarkan sangat murah dan beraneka ragam. </p>
                 <p>Rental mobil kami juga menawarkan untuk dapat menyewa supir sekaligus.</p>
             </div>
         </div>

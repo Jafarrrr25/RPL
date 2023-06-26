@@ -6,7 +6,7 @@ class Formulir extends BaseController
 {
     public function index()
     {
-        return view('/formulir/Formulir_Sewa');
+        return view('/Formulir/Formulir_Sewa');
     }
 
      public function simpan()

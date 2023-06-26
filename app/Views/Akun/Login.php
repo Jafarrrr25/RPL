@@ -34,7 +34,7 @@
 <article>
     <div class="container mt-2">
         <h1>Login</h1>
-        <form action="/Akun/check" method="post">
+        <form action="Akun/check" method="post">
             <? csrf_field() ?>
             <div class="form-group">
                 <label for="usr"><b>Username : </b></label>

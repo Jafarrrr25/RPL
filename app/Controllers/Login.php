@@ -53,7 +53,7 @@ class Login extends BaseController
         if ($result && $result->username && $result->password) {
             $session = session();
             $session->set('pengguna', $post['usr']);
-            return view('Formulir/Formulir_Sewa');
+            return view('HomeCust');
         } else {
             return view('Akun/Error');
         }
@@ -65,7 +65,7 @@ class Login extends BaseController
         if ($session->has('pengguna')) {
             $item = $session->get('pengguna');
             if ($item == 'admin') {
-                return view('Formulir/Formulir_Sewa');
+                return view('Formulir_Sewa');
             } else {
                 return view('Akun/Login');
             }

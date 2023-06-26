@@ -14,7 +14,7 @@
     <article>
         <div class="container mt-2">
             <h1>Formulir Pengisian Penyewaan Mobil</h1>
-            <form action="simpan" method="get"></form>
+            <form action="Formulir/simpan" method="get"></form>
             <? csrf_field() ?>
 
             <div class="form-group">
