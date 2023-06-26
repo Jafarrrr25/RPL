@@ -53,7 +53,7 @@ class Login extends BaseController
         if ($result && $result->username && $result->password) {
             $session = session();
             $session->set('pengguna', $post['usr']);
-            return view('HomeCust');
+            return view('/HomeCust');
         } else {
             return view('Akun/Error');
         }
@@ -63,16 +63,17 @@ class Login extends BaseController
     {
         $session = session();
         if ($session->has('pengguna')) {
-            $item = $session->get('pengguna');
-            if ($item == 'admin') {
-                return view('Login/HomeCust');
-            } else {
+            $username = $session->get('pengguna');
+            if ($username === $this->request->getPost('pengguna')) {
                 return view('Akun/Login');
+            } else {
+                return view('/HomeCust');
             }
         } else {
             return view('Akun/Login');
         }
     }
+    
 
     // public function login()
     // {
