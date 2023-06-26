@@ -27,18 +27,39 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#homeku">Home</a>
                         <a class="nav-link" href="#">Sewa</a>
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#aboutku">About Us</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <!-- Konten Utama Website Rental Mobil -->
-    </main>
+
+    <section class="hero" id="homeku">
+        <main class="content">
+            <h1>Rental Mobil Andalan Keluarga</h1>
+            <p>Mobilku Mobilmu, Mobil kita semua</p>
+            <a href="#" class="cta">Rental Sekarang</a>
+        </main>
+    </section>
+
+    <section id="aboutku" class="about">
+        <h2><span>Tentang</span> Kami</h2>
+
+        <div class="row">
+            <div class="about-img">
+                <img src="/image/about-img.jpg" alt="about">
+            </div>
+            <div class="content">
+                <h3>Mengapa Rental Kami</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perspiciatis. Quod expedita aspernatur eius animi autem omnis sunt sit aut harum, eveniet dolor veritatis cupiditate quae praesentium magni inventore repudiandae.</P>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis nesciunt ea natus quia ducimus eaque quis dolores rerum porro, blanditiis earum, ullam nam inventore atque aliquid omnis optio rem officiis!</p>
+            </div>
+        </div>
+    </section>
+
 
     <footer>
 
