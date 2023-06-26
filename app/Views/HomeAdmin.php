@@ -41,12 +41,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Laporan Keuangan</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/about">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/help">Help</a>
-                            </li>
                         </ul>
                     </div>
                 </nav>
