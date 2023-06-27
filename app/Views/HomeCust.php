@@ -28,9 +28,11 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="#homeku">Home</a>
-                        <a class="nav-link" href="formulir/formulir_Sewa">Sewa</a>
+                        <a class="nav-link" href="Akun/formulir/formulir_Sewa">Sewa</a>
                         <a class="nav-link" href="#aboutku">About Us</a>
-                        <a class="nav-link" href="/Akun/logout">Logout</a>
+                        <div class="btn">
+                            <a class="nav-link btn btn-outline-success" href="/Akun/logout">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,7 +44,7 @@
         <main class="content">
             <h1>Rental Mobil Andalan Keluarga</h1>
             <p>Mobilku Mobilmu, Mobil kita semua</p>
-            <a href="formulir/formulir_Sewa" class="cta">Sewa Sekarang</a>
+            <a href="Akun/formulir/formulir_Sewa" class="cta">Sewa Sekarang</a>
         </main>
     </section>
 

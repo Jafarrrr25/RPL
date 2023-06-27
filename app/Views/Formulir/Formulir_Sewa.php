@@ -11,7 +11,7 @@
     <style>
         .flex-container {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -70,9 +70,10 @@
                 <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
             </div>
             <div class="flex-container">
-                <a href="/customer" class="btn btn-primary mt-2">Kembali</a>
+                <a href="/Formulir/Sukses" class="btn btn-primary mt-2">Kirim</a>
+                <a href="/customer" class="btn btn-danger  mt-2">Kembali</a>
             </div>
-            <a href="/Formulir/Sukses" class="btn btn-primary mt-2">Kirim</a>
+
             </form>
         </div>
     </article>

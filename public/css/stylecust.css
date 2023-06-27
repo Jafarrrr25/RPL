@@ -45,6 +45,10 @@ body{
     align-items: center;
 }
 
+.navbar-nav .btn {
+    font-family: 'Racing Sans One', cursive;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
