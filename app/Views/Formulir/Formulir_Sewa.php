@@ -71,7 +71,7 @@
             </div>
             <div class="flex-container">
                 <a href="/Formulir/Sukses" class="btn btn-primary mt-2">Kirim</a>
-                <a href="/customer" class="btn btn-danger  mt-2">Kembali</a>
+                <a href="/customer" class="btn btn-danger mt-2">Kembali</a>
             </div>
 
             </form>
