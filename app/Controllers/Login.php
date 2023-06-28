@@ -74,7 +74,6 @@ class Login extends BaseController
         }
     }
     
-
     // public function login()
     // {
     //     $model = model(UserModel::class);
