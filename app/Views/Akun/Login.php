@@ -44,7 +44,7 @@
                 <label for="pwd"><b>Password : </b></label>
                 <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Password">
             </div>
-            <input type="submit" name="" value="Simpan" class="btn btn-primary mt-2" />
+            <input type="submit" name="" value="Login" class="btn btn-primary mt-2" />
         </form>
     </div>
 </article>

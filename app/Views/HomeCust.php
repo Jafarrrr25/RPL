@@ -25,13 +25,15 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" href="#homeku">Home</a>
-                        <a class="nav-link" href="formulir/formulir_Sewa">Sewa</a>
+                        <a class="nav-link" href="Akun/formulir/formulir_Sewa">Sewa</a>
                         <a class="nav-link" href="#aboutku">About Us</a>
-                        <a class="nav-link" href="/Akun/logout">Logout</a>
                     </div>
+                </div>
+                <div class="nav-btn">
+                    <a class="nav-link btn btn-outline-success" href="/Akun/logout">Logout</a>
                 </div>
             </div>
         </nav>
@@ -42,7 +44,7 @@
         <main class="content">
             <h1>Rental Mobil Andalan Keluarga</h1>
             <p>Mobilku Mobilmu, Mobil kita semua</p>
-            <a href="formulir/formulir_Sewa" class="cta">Sewa Sekarang</a>
+            <a href="Akun/formulir/formulir_Sewa" class="cta">Sewa Sekarang</a>
         </main>
     </section>
 
@@ -55,17 +57,12 @@
             </div>
             <div class="content">
                 <h3>Mengapa Rental Kami????</h3>
-                <P>Rental mobil DVJR memiliki banyak pilihan mobil, antara lain mobil keluarga, mobil adventur, city car dan masih banyak lagi.</P>
-                <p>Harga yang kami tawarkan sangat murah dan beraneka ragam. </p>
+                <p>Rental mobil DVJR memiliki banyak pilihan mobil, antara lain mobil keluarga, mobil adventur, city car dan masih banyak lagi.</p>
+                <p>Harga yang kami tawarkan sangat murah dan beraneka ragam.</p>
                 <p>Rental mobil kami juga menawarkan untuk dapat menyewa supir sekaligus.</p>
             </div>
         </div>
     </section>
-
-
-    <footer>
-
-    </footer>
 
 </body>
 
