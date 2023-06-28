@@ -50,7 +50,7 @@ $routes->get('Akun/logout', [Login::class, 'logout']);
 $routes->match(['get', 'post'], '/register', [Login::class, 'register']);
 $routes->match(['get', 'post'], 'Akun/check', [Login::class, 'check']);
 $routes->match(['get', 'post'], 'Akun/formulir/formulir_Sewa', [Formulir::class, 'index']);
-$routes->match(['get', 'post'], 'Formulir/Sukses', [Formulir::class, 'simpan']);
+$routes->match(['get', 'post'], 'formulir/Sukses', [Formulir::class, 'simpan']);
 $routes->match(['get', 'post'], 'Akun/Akun/check', [Login::class, 'check']);
 $routes->match(['get', 'post'], '/akun/Akun/check', [Login::class, 'check']);
 $routes->match(['get', 'post'], 'Akun/Akun/formulir/formulir_Sewa', [Formulir::class, 'index']);

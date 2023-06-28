@@ -14,18 +14,17 @@
     <article>
         <div class="container mt-2">
             <h1>Formulir Pengisian Penyewaan Mobil</h1>
-            <form action="Formulir/simpan" method="get"></form>
+            <form action="/formulir/Sukses" method="post">
             <? csrf_field() ?>
 
             <div class="form-group">
-                <label for="ipk"><b>Nama Penyewa : </b></label>
-                <input type="text" class="form-control" name="plat" id="plat" placeholder="Nama Penyewa">
+                <label for="nama"><b>Nama Penyewa : </b></label>
+                <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Penyewa">
             </div>
 
             <div class="form-group ">
-                <label for="status"><b>Pilih Mobil : </b></label>
-                <select name="status" id="status" class="form-control col-sm-12">
-                    <option selected>Tersedia</option>
+                <label for="mobil"><b>Pilih Mobil : </b></label>
+                <select name="mobil" id="mobil" class="form-control col-sm-12">
                     <?php $db = \Config\Database::connect();
                     $query = $db->query('Select * from mobil');
 
@@ -39,8 +38,8 @@
             </div>
 
             <div class="form-group ">
-                <label for="status"><b>Pilih Sopir : </b></label>
-                <select name="status" id="status" class="form-control col-sm-12">
+                <label for="sopir"><b>Pilih Sopir : </b></label>
+                <select name="sopir" id="sopir" class="form-control col-sm-12">
                     <option selected>Tidak dengan Sopir</option>
                     <?php $db = \Config\Database::connect();
                     $query = $db->query('Select * from supir');
@@ -55,16 +54,16 @@
             </div>
 
             <div class="form-group">
-                <label for="nim"><b>Tanggal Pinjam :</b> </label>
-                <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
+                <label for="pinjam"><b>Tanggal Pinjam :</b> </label>
+                <input type="date" class="form-control" name="pinjam" id="pinjam" placeholder="ID Kendaraan">
             </div>
 
             <div class="form-group">
-                <label for="nim"><b>Tanggal Kembali :</b> </label>
-                <input type="date" class="form-control" name="tgl_pjk" id="tgl_pjk" placeholder="ID Kendaraan">
+                <label for="kembali"><b>Tanggal Kembali :</b> </label>
+                <input type="date" class="form-control" name="kembali" id="kembali" placeholder="ID Kendaraan">
             </div>
 
-            <a href="/Formulir/Sukses" class="btn btn-primary mt-2">Kirim</a>
+            <input type="submit" value="Kirim" class="btn btn-primary">
             </form>
         </div>
     </article>
