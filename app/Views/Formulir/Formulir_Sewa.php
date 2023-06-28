@@ -69,11 +69,10 @@
                 <input type="date" class="form-control" name="kembali" id="kembali" placeholder="ID Kendaraan">
             </div>
             <div class="flex-container">
-                <a href="/Formulir/Sukses" class="btn btn-primary mt-2">Kirim</a>
+                <input type="submit" value="Kirim" class="btn btn-primary">
                 <a href="/customer" class="btn btn-danger mt-2">Kembali</a>
             </div>
 
-            <input type="submit" value="Kirim" class="btn btn-primary">
             </form>
         </div>
     </article>
